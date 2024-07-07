@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+:root {
+    --ff-default: "Manrope", sans-serif;
+    --fw-default: 500;
+    --fw-bold: 800;
+    --fs-default: 13px;
+
+    --clr-verydark-grblue: hsl(217, 19%, 35%);
+    --clr-desa-darkblue: hsl(214, 17%, 51%);
+    --clr-grblue: hsl(212, 23%, 69%);
+    --clr-light-grblue: hsl(210, 46%, 95%);
+}
+
+*, *::before, *::after {box-sizing: border-box;}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: var(--fw-default) var(--fs-default) var(--ff-default);
+    text-decoration: none;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-light-grblue);
+}
+
+.wrapper {  
+    display: flex;
+    padding: 100px 10px 50px 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    max-width: 450px;
+    box-shadow: 5px 5px 55px rgb(192, 192, 192);
+}
+
+.card > img {
+    border-radius: 15px 15px 0 0;
+    width: 450px;
+}
+
+.card > h1 {
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    margin: 45px 50px 10px 40px;
+    color: var(--clr-verydark-grblue);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.card > p {
+    font-size: 18px;
+    color: var(--clr-grblue);
+    margin: 20px 55px 0px 40px;
+    line-height: 1.7;
+}
+
+.user-info-share {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 175px;
+}
+
+.user-info-share-active {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-verydark-grblue);
+    border-radius: 0 0 15px 15px;
+}
+
+.user-info-share > img {
+    border-radius: 50%;
+    scale: 35%;
+    margin: 0 0 0 -10px;
+    display: block;
+}
+
+.username {
+    font-weight: var(--fw-bold);
+    font-size: 15px;
+    color: var(--clr-desa-darkblue);
+    letter-spacing: 1px;
+    text-indent: -35px;
+    margin: 0 0 5px 0;
+}
+
+.date {
+    font-size: 16px;
+    color: var(--clr-grblue);
+    letter-spacing: 1px;
+    text-indent: -35px;
+}
+
+.share-button {
+    margin: auto;
+    color: #6E8098;
+}
+
+.share-msg {
+    display: none;
+    color: var(--clr-grblue);
+    font-size: 20px;
+    letter-spacing: 7px;
+    text-indent: 50px;
+    margin: 11px 15px 5px 0;
+}
+
+.share-button svg {
+    background-color: var(--clr-light-grblue);
+    background-origin: content-box;
+    padding: 10px;
+    scale: 150%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px; 
+}
+
+.share-button svg:hover {
+    cursor: pointer;
+}
+
+.social-media-icons {
+    display: none;
+    flex-direction: row;
+}
+
+
+.social-media-icons svg {
+    scale: 150%;
+    margin: 12px 25px 0 0;
+}
+
+.social-media-icons svg:hover {
+    cursor: pointer;
+}
+
+.social-media-icons-popup {
+    display: none;
+}
+
+.social-media-icons-popup-active {
+    display: flex;
+    position: relative;
+    align-items: center;
+    right: 35%;
+    bottom: 70%;
+    height: 50px;
+    z-index: 2;
+    min-width: 250px;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+}
+
+.social-media-icons-popup-active p {
+    margin: 0 10px 0 10px;
+    letter-spacing: 5px;
+    color: var(--clr-grblue);
+}
+
+.social-media-icons-popup-active svg {
+    margin: 0 10px 0 10px;
+}
+
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
+
+.attribution a {
+    transition: color 300ms ease-in-out;
+}
+
+.attribution a:hover {
+    color: red;
+}
+
+@media screen and (width > 870px) {
+    .wrapper {
+        padding: 400px 10px 50px 10px;
+    }
+
+    .card {
+        flex-direction: row;
+        max-width: 900px;
+        max-height: 360px;
+    }
+
+    .card > img { 
+        float: left;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .card > h1 { 
+        margin: 30px 30px 20px 480px;
+    }
+
+    .card > p {
+        margin: 10px 55px 0px 480px;
+        font-size: 14px;
+    }
+
+    .user-info-share {
+        width: 350px;
+        height: 125px;
+    }
+
+    .user-info-share > img { 
+        scale: 30%;
+        margin: 0 0 0 -30px;
+    }
+
+    .username, .date { 
+        font-size: 14px;
+        margin: 5px 0 5px -10px;
+        text-wrap: nowrap;
+    }
+
+    .share-button svg { 
+        scale: 100%;
+        float: right;
+        margin: 0 0 0 110px;
+    }
+
+}
